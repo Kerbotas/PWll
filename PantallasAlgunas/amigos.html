@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Amigos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #004040; /* Color de fondo general */
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 90px;
+            padding-bottom: 80px;
+        }
+        header {
+            background-color: #002b2b; /* Color de fondo del encabezado */
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            position: fixed; /* Encabezado fijo */
+            width: 100%; /* Encabezado ocupa todo el ancho */
+            z-index: 999; /* Encabezado se muestra por encima del contenido */
+        }
+        header, .footer {
+            color: #fff;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: auto;
+        }
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .search-bar {
+            width: 300px;
+            margin-left: auto;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #333; /* Color de fondo del cuadro de búsqueda */
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .friend-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .friend-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #666; /* Color de borde entre amigos */
+            padding: 10px;
+        }
+        .friend-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .friend-item h3 {
+            margin: 0;
+            color: #fff; /* Color del texto del nombre del amigo */
+        }
+        .friend-item p {
+            color: #ccc; /* Color del texto de la descripción del amigo */
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: #4CAF50; /* Cambiado a verde */
+        }
+        .pagination-item {
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #4CAF50; /* Cambiado a verde */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination-item.active {
+            background-color: #006400; /* Cambiado a verde oscuro */
+        }
+        .footer {
+            background-color: #002b2b; /* Color de fondo del pie de página */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed; /* Pie de página fijo */
+            bottom: 0;
+            width: 100%; /* Pie de página ocupa todo el ancho */
+            z-index: 999; /* Pie de página se muestra por encima del contenido */
+        }
+        .add-post-FP-button {
+            padding: 15px 10px;
+            border-radius: 20px;
+            background-color: #4CAF50; /* Cambiado a verde */
+            color: #fff;
+            border: 10px;
+            cursor: pointer;
+            margin-left: 1650px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile" onclick="alert('Perfil de usuario')">
+                <img src="profile_picture.jpg" alt="Perfil">
+                <span>Nombre de Usuario</span>
+                <button class="add-post-FP-button">Salir</button> <!-- Cambiado a "Salir" -->
+            </div>
+        </div>
+    </header>
+  
+    <div class="container">
+        <h1 style="color: #fff;">Lista de Amigos</h1>
+        <input type="text" class="search-bar" placeholder="Buscar amigos...">
+        <ul class="friend-list">
+            <li class="friend-item">
+                <img src="friend1.jpg" alt="Amigo 1">
+                <div>
+                    <h3>Amigo 1</h3>
+                    <p>Descripción breve del amigo 1.</p>
+                </div>
+            </li>
+            <li class="friend-item">
+                <img src="friend2.jpg" alt="Amigo 2">
+                <div>
+                    <h3>Amigo 2</h3>
+                    <p>Descripción breve del amigo 2.</p>
+                </div>
+            </li>
+            <li class="friend-item">
+                <img src="friend3.jpg" alt="Amigo 3">
+                <div>
+                    <h3>Amigo 3</h3>
+                    <p>Descripción breve del amigo 3.</p>
+                </div>
+            </li>
+            <!-- Agregar más amigos si es necesario -->
+        </ul>
+        
+        <!-- Paginación -->
+        <div class="pagination">
+            <span class="pagination-item active">1</span>
+            <span class="pagination-item">2</span>
+            <span class="pagination-item">3</span>
+            <span class="pagination-item">4</span>
+            <span class="pagination-item">5</span>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Programación Web 2 | 7 de marzo de 2024 <!-- Fecha actualizada -->
+    </div>
+</body>
+</html>

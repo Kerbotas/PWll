@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #004040; /* Color de fondo general más oscuro */
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 90px;
+            padding-bottom: 80px;
+        }
+        header {
+            background-color: #002b2b; /* Color de fondo del encabezado más oscuro y verdoso */
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            position: fixed; /* Encabezado fijo */
+            width: 100%; /* Encabezado ocupa todo el ancho */
+            
+        }
+        header, .footer {
+            color: #fff;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            
+            margin: 10 50px; /* Margen añadido al contenedor */
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 285px;
+            margin-left: 50px;
+        }
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .search-bar {
+            width: 600px; /* Doble del ancho actual */
+            margin-right: 10px; /* Movido más a la izquierda */
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .category-select {
+            width: 120px;
+            padding: 10px;
+            border-radius: 55px;
+            background-color: #4CAF50; /* Cambiado a verde */
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+        .post {
+            background-color: #222;
+            border-radius: 35px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 50px;
+            margin-top: 20px;
+            
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post p {
+            margin-bottom: 10px;
+        }
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #999;
+        }
+        .post-footer span {
+            font-size: 12px;
+        }
+        .post-footer a {
+            color: #4CAF50; /* Cambiado a verde */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .add-post-button {
+            padding: 15px 10px;
+            border-radius: 20px;
+            background-color: #4CAF50; /* Cambiado a verde */
+            color: #fff;
+            border: 10px;
+            cursor: pointer;
+            margin-left: 28%;
+        }
+        .add-post-button:hover {
+            background-color: #45a049; /* Cambiado a un tono más oscuro de verde */
+        }
+        .friends-list {
+            float: left;
+            width: 200px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+            clear: both;
+            position: fixed; /* Lista de amigos fija */
+            left: 0;
+            top: 90px; /* Espaciado desde el encabezado */
+            color: #fff;
+            z-index: 999; /* Lista de amigos se muestra por encima del contenido */
+        }
+        .friend {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .friend img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #002b2b; /* Color de fondo del pie de página más oscuro y verdoso */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed; /* Pie de página fijo */
+            bottom: 0;
+            width: 100%; /* Pie de página ocupa todo el ancho */
+            z-index: 999; /* Pie de página se muestra por encima del contenido */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile" onclick="alert('Perfil de usuario')">
+                <img src="profile_picture.jpg" alt="Perfil">
+                <span>Nombre de Usuario</span>
+            </div>
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <select class="category-select">
+                <option value="categoria" selected>Categoría</option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+            </select>
+            <button class="add-post-button">Salir</button> <!-- Cambiado a "Salir" -->
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="friends-list">
+            <div class="friend">
+                <img src="friend1.jpg" alt="Amigo 1">
+                <span>Amigo 1</span>
+            </div>
+            <div class="friend">
+                <img src="friend2.jpg" alt="Amigo 2">
+                <span>Amigo 2</span>
+            </div>
+            <div class="friend">
+                <img src="friend3.jpg" alt="Amigo 3">
+                <span>Amigo 3</span>
+            </div>
+            <!-- Añadir más amigos aquí -->
+        </div>
+
+        <div class="posts">
+            <div class="post">
+                <h2>Título de la Publicación 1</h2>
+                <p>Contenido de la publicación 1.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario1</a> hace 1 hora</span>
+                    <span><a href="focusPublicacion.html">10 comentarios</a></span>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Título de la Publicación 2</h2>
+                <p>Contenido de la publicación 2.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario2</a> hace 30 minutos</span>
+                    <span><a href="focusPublicacion.html">5 comentarios</a></span>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Título de la Publicación 3</h2>
+                <p>Contenido de la publicación 3.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario3</a> hace 2 horas</span>
+                    <span><a href="focusPublicacion.html">2 comentarios</a></span>
+                </div>
+            </div>
+            
+            <!-- Agregando más publicaciones de ejemplo -->
+            <div class="post">
+                <h2>Título de la Publicación 4</h2>
+                <p>Contenido de la publicación 4.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario4</a> hace 3 horas</span>
+                    <span><a href="focusPublicacion.html">8 comentarios</a></span>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Título de la Publicación 5</h2>
+                <p>Contenido de la publicación 5.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario5</a> hace 4 horas</span>
+                    <span><a href="focusPublicacion.html">6 comentarios</a></span>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Título de la Publicación 6</h2>
+                <p>Contenido de la publicación 6.</p>
+                <div class="post-footer">
+                    <span>Publicado por <a href="#">Usuario6</a> hace 5 horas</span>
+                    <span><a href="focusPublicacion.html">7 comentarios</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Programación Web 2 | 7 de marzo de 2024 <!-- Fecha actualizada -->
+    </div>
+</body>
+</html>
